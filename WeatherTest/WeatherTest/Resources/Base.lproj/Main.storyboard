@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bYK-Z4-LsA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WTHomeViewController" customModule="WeatherTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="hC0-fI-wAP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vr-f6-Mtd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <connections>
+                                    <action selector="autocompleteClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="skP-2F-V8r"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cloudiness" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="none" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Y0v-Pr-wRe">
+                                <rect key="frame" x="16" y="285" width="343" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temperature" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="none" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="B9D-Jx-2b7">
+                                <rect key="frame" x="116" y="200" width="101" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="none" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="ewO-HJ-Rdf">
+                                <rect key="frame" x="264" y="218" width="42" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="none" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="4eR-uY-0wb">
+                                <rect key="frame" x="318" y="218" width="42" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZCc-cr-UfK">
+                                <rect key="frame" x="16" y="200" width="72" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City Name" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="none" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="QTo-rW-cbb">
+                                <rect key="frame" x="57" y="128" width="261" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hC0-fI-wAP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="26s-hT-XfX"/>
+                            <constraint firstItem="0vr-f6-Mtd" firstAttribute="leading" secondItem="hC0-fI-wAP" secondAttribute="leading" id="D4Z-4a-Vcv"/>
+                            <constraint firstItem="0vr-f6-Mtd" firstAttribute="top" secondItem="hC0-fI-wAP" secondAttribute="top" id="YZZ-cn-9SB"/>
+                            <constraint firstItem="hC0-fI-wAP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fUL-pe-V09"/>
+                            <constraint firstItem="0vr-f6-Mtd" firstAttribute="trailing" secondItem="hC0-fI-wAP" secondAttribute="trailing" id="mxu-eP-Bkq"/>
+                            <constraint firstItem="hC0-fI-wAP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="r8c-QY-x76"/>
+                            <constraint firstItem="0vr-f6-Mtd" firstAttribute="bottom" secondItem="hC0-fI-wAP" secondAttribute="bottom" id="xfw-ka-wl7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bck-pC-AVw"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="QTo-rW-cbb" id="6yZ-TU-xcA"/>
+                        <outlet property="cloudinessLabel" destination="Y0v-Pr-wRe" id="pkQ-PS-Xxw"/>
+                        <outlet property="currentTempLabel" destination="B9D-Jx-2b7" id="0vp-Lv-ftC"/>
+                        <outlet property="maxTempLabel" destination="4eR-uY-0wb" id="zQo-zC-f3D"/>
+                        <outlet property="minTempLabel" destination="ewO-HJ-Rdf" id="fpd-ob-LUo"/>
+                        <outlet property="weatherImageView" destination="ZCc-cr-UfK" id="8eB-me-dtK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Wa-ke-amG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bYK-Z4-LsA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="osC-NC-4je">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EpX-9I-9vZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YH2-gU-B55" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-356" y="-71"/>
+        </scene>
+    </scenes>
+</document>
